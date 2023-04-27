@@ -1,0 +1,226 @@
+[versions]
+accompanist = "0.30.1"
+# @pin TODO: Unpin once upside down cake is in beta
+activity = "1.7.0-alpha04"
+androidJunit = "1.1.4-alpha05"
+arrow = "1.2.0-RC"
+atomicfu = "0.20.2"
+coil = "2.3.0"
+coilTransformations = "2.0.2"
+collection-ktx = "1.3.0-alpha04"
+compose = "1.4.1"
+# @pin TODO: Unpin once upside down cake is in beta
+compose-activity = "1.7.0-beta01"
+compose-compiler = "1.4.5"
+compose-constraintLayout = "1.1.0-alpha09"
+compose-destinations = "1.9.41-beta"
+compose-dialogs = "1.1.1"
+compose-material3 = "1.1.0-rc01"
+compose-navigation = "2.6.0-beta01"
+compose-paging = "1.0.0-alpha18"
+compose-reorderable = "0.9.6"
+composeDetektPlugin = "1.2.2"
+core-ktx = "1.10.0"
+# @pin
+coroutines = "1.6.4"
+crashlytics-gradle = "2.9.4"
+datetime = "0.4.0"
+dependencyAnalysisPlugin = "1.19.0"
+detekt = "1.23.0-RC1"
+espresso = "3.5.0-alpha05"
+firebase = "31.4.0"
+firebase-messaging = "23.1.1"
+firebase-performance-gradle = "1.4.2"
+flowExt = "0.6.0"
+flowmvi = "1.2.0-alpha01"
+glance = "1.0.0-alpha05"
+gms = "4.3.15"
+gms-appupdate = "2.0.1"
+gms-billing = "5.2.0"
+gms-coroutines = "1.7.0-Beta"
+gms-inappreview = "2.0.1"
+google-auth = "20.5.0"
+google-integrity = "1.1.0"
+gradle-analytics-plugin = "1.0.0-beta9"
+# @pin
+gradleAndroid = "8.2.0-alpha01"
+gradleDoctorPlugin = "0.8.1"
+iconics = "5.4.0"
+iconics-fontawesome-typeface = "5.13.3.0-kotlin"
+iconics-material-typeface = "4.0.0.1-kotlin"
+junit = "4.13.2"
+kermit = "2.0.0-RC4"
+kmmutils = "1.0.2"
+koin = "3.4.0"
+kotest = "5.6.1"
+# @pin
+kotlin = "1.8.20"
+# @pin
+ksp = "1.8.20-1.0.11"
+ktor = "2.2.4"
+libsu = "5.0.5"
+lifecycle = "2.6.1"
+material = "1.6.0-alpha01"
+mockk = "1.13.4"
+paging = "3.2.0-alpha04"
+paging-compose = "1.0.0-alpha18"
+palette-ktx = "1.0.0"
+preferences-ktx = "1.2.0"
+robolectric = "4.10"
+safetynet = "18.0.1"
+security-ktx = "1.1.0-alpha06"
+serialization = "1.5.0"
+# @pin
+splashscreen = "1.0.0"
+sqlDelight = "2.0.0-alpha05"
+startup = "1.1.1"
+test-runner = "1.5.0-alpha02"
+transition-ktx = "1.4.1"
+turbine = "0.12.3"
+utils = "1.0.4"
+uuid = "0.7.0"
+vectorDrawable = "1.1.0"
+versionCatalogUpdatePlugin = "0.8.0"
+versionsPlugin = "0.46.0"
+work = "2.8.1"
+gridpad = "1.1.0"
+
+[libraries]
+accompanist-drawablePainter = { module = "com.google.accompanist:accompanist-drawablepainter", version.ref = "accompanist" }
+accompanist-navMaterial = { module = "com.google.accompanist:accompanist-navigation-material", version.ref = "accompanist" }
+accompanist-permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanist" }
+accompanist-placeholder = { module = "com.google.accompanist:accompanist-placeholder-material", version.ref = "accompanist" }
+accompanist-swiperefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "accompanist" }
+accompanist-systemUiController = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist" }
+activity = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
+android-gradle = { module = "com.android.tools.build:gradle", version.ref = "gradleAndroid" }
+android-junit = { module = "androidx.test.ext:junit", version.ref = "androidJunit" }
+android-test-runner = { module = "androidx.test:runner", version.ref = "test-runner" }
+androidutils-android = { module = "com.github.Nek-12.AndroidUtils:android-ktx", version.ref = "utils" }
+androidutils-compose = { module = "com.github.Nek-12.AndroidUtils:compose-ktx", version.ref = "utils" }
+androidutils-coroutines = { module = "com.github.Nek-12.AndroidUtils:coroutine-ktx", version.ref = "utils" }
+androidutils-material = { module = "com.github.Nek-12.AndroidUtils:material-ktx", version.ref = "utils" }
+androidutils-preferences = { module = "com.github.Nek-12.AndroidUtils:preferences-ktx", version.ref = "utils" }
+androidx-collection = { module = "androidx.collection:collection-ktx", version.ref = "collection-ktx" }
+androidx-core = { module = "androidx.core:core-ktx", version.ref = "core-ktx" }
+arrow = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
+atomicfu = { module = "org.jetbrains.kotlinx:atomicfu", version.ref = "atomicfu" }
+atomicfu-gradle = { module = "org.jetbrains.kotlinx:atomicfu-gradle-plugin", version.ref = "atomicfu" }
+coil = { module = "io.coil-kt:coil", version.ref = "coil" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+coil-transformations = { module = "com.github.Commit451.coil-transformations:transformations", version.ref = "coilTransformations" }
+compose-activity = { module = "androidx.activity:activity-compose", version.ref = "compose-activity" }
+compose-animation = { module = "androidx.compose.animation:animation", version.ref = "compose" }
+compose-constraintlayout = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "compose-constraintLayout" }
+compose-destinations = { module = "io.github.raamcosta.compose-destinations:animations-core", version.ref = "compose-destinations" }
+compose-destinations-ksp = { module = "io.github.raamcosta.compose-destinations:ksp", version.ref = "compose-destinations" }
+compose-dialogs = { module = "com.maxkeppeler.sheets-compose-dialogs:core", version.ref = "compose-dialogs" }
+compose-dialogs-calendar = { module = "com.maxkeppeler.sheets-compose-dialogs:calendar", version.ref = "compose-dialogs" }
+compose-dialogs-clock = { module = "com.maxkeppeler.sheets-compose-dialogs:clock", version.ref = "compose-dialogs" }
+compose-dialogs-colorpicker = { module = "com.maxkeppeler.sheets-compose-dialogs:color", version.ref = "compose-dialogs" }
+compose-dialogs-datetime = { module = "com.maxkeppeler.sheets-compose-dialogs:date-time", version.ref = "compose-dialogs" }
+compose-dialogs-duration = { module = "com.maxkeppeler.sheets-compose-dialogs:duration", version.ref = "compose-dialogs" }
+compose-dialogs-info = { module = "com.maxkeppeler.sheets-compose-dialogs:info", version.ref = "compose-dialogs" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+compose-glance = { module = "androidx.glance:glance", version.ref = "glance" }
+compose-graphics = { module = "androidx.compose.animation:animation-graphics", version.ref = "compose" }
+compose-material2 = { module = "androidx.compose.material:material", version.ref = "compose" }
+compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+compose-navigation = { module = "androidx.navigation:navigation-compose", version.ref = "compose-navigation" }
+compose-paging = { module = "androidx.paging:paging-compose", version.ref = "compose-paging" }
+compose-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+compose-reorderable = { module = "org.burnoutcrew.composereorderable:reorderable", version.ref = "compose-reorderable" }
+compose-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "compose" }
+compose-testing = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
+compose-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+compose-windowsizeclass = { module = "androidx.compose.material3:material3-window-size-class", version.ref = "compose-material3" }
+compose-gridpad = { module = "com.touchlane:gridpad", version.ref = "gridpad" }
+detekt-compose = { module = "ru.kode:detekt-rules-compose", version.ref = "composeDetektPlugin" }
+detekt-formatting = "io.gitlab.arturbosch.detekt:detekt-formatting:1.22.0"
+detekt-gradle = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
+espresso = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
+flowext = { module = "io.github.hoc081098:FlowExt-jvm", version.ref = "flowExt" }
+iconics-compose = { module = "com.mikepenz:iconics-compose", version.ref = "iconics" }
+iconics-core = { module = "com.mikepenz:iconics-core", version.ref = "iconics" }
+iconics-fontawesome = { module = "com.mikepenz:fontawesome-typeface", version.ref = "iconics-fontawesome-typeface" }
+iconics-material = { module = "com.mikepenz:google-material-typeface-rounded", version.ref = "iconics-material-typeface" }
+junit = { module = "junit:junit", version.ref = "junit" }
+kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
+kmmutils-apiresult = { module = "pro.respawn.kmmutils:apiresult", version.ref = "kmmutils" }
+kmmutils-common = { module = "pro.respawn.kmmutils:common", version.ref = "kmmutils" }
+kmmutils-coroutines = { module = "pro.respawn.kmmutils:coroutines", version.ref = "kmmutils" }
+kmmutils-datetime = { module = "pro.respawn.kmmutils:datetime", version.ref = "kmmutils" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-compose = "io.insert-koin:koin-androidx-compose:3.4.4"
+koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin" }
+koin-workmanager = { module = "io.insert-koin:koin-androidx-workmanager", version.ref = "koin" }
+kotest-assertions = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
+kotest-junit = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
+kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
+kotlin-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+kotlin-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "serialization" }
+kotlin-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "datetime" }
+ksp-gradle = { module = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+lifecycle-process = { module = "androidx.lifecycle:lifecycle-process", version.ref = "lifecycle" }
+lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
+lifecycle-service = { module = "androidx.lifecycle:lifecycle-service", version.ref = "lifecycle" }
+lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+mvi-android = { module = "pro.respawn.flowmvi:android", version.ref = "flowmvi" }
+mvi-compose = { module = "pro.respawn.flowmvi:android-compose", version.ref = "flowmvi" }
+mvi-core = { module = "pro.respawn.flowmvi:core", version.ref = "flowmvi" }
+paging = { module = "androidx.paging:paging-runtime", version.ref = "paging" }
+paging-common = { module = "androidx.paging:paging-common", version.ref = "paging" }
+paging-compose = { module = "androidx.paging:paging-compose", version.ref = "paging-compose" }
+palette = { module = "androidx.palette:palette-ktx", version.ref = "palette-ktx" }
+preference = { module = "androidx.preference:preference-ktx", version.ref = "preferences-ktx" }
+robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
+security = { module = "androidx.security:security-crypto", version.ref = "security-ktx" }
+splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "splashscreen" }
+transition = { module = "androidx.transition:transition-ktx", version.ref = "transition-ktx" }
+uuid = { module = "com.benasher44:uuid", version.ref = "uuid" }
+vectordrawable = { module = "androidx.vectordrawable:vectordrawable-animated", version.ref = "vectorDrawable" }
+
+[bundles]
+compose = [
+    "accompanist-drawablePainter",
+    "compose-activity",
+    "compose-animation",
+    "compose-constraintlayout",
+    "compose-foundation",
+    "compose-graphics",
+    "compose-material3",
+    "compose-navigation",
+    "compose-preview",
+    "compose-ui",
+    "compose-viewmodel",
+    "mvi-compose",
+]
+core = [
+    "flowext",
+    "kermit",
+    "kmmutils-apiresult",
+    "kmmutils-common",
+    "kmmutils-coroutines",
+    "kmmutils-datetime",
+    "kotlin-coroutines",
+    "kotlin-stdlib",
+    "kotlinx-datetime",
+]
+kmmutils = [
+    "kmmutils-apiresult",
+    "kmmutils-common",
+    "kmmutils-coroutines",
+    "kmmutils-datetime",
+]
+
+[plugins]
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
