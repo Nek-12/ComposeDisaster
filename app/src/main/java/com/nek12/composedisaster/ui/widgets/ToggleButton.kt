@@ -88,7 +88,6 @@ private fun BadToggleButtonPreview() = ComposeDisasterTheme {
     BadToggleButton(text = "Text") // wait, we did not even specify the onClick lambda?
 }
 
-
 private class BooleanProvider : CollectionPreviewParameterProvider<Boolean>(listOf(true, false))
 
 @Preview

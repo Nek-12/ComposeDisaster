@@ -10,9 +10,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.nek12.composedisaster.ui.PinState
@@ -25,6 +27,17 @@ import com.ramcosta.composedestinations.annotation.RootNavGraph
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import org.koin.androidx.compose.getViewModel
 import org.koin.compose.rememberKoinInject
+import pro.respawn.flowmvi.android.compose.collectAsStateOnLifecycle
+
+
+class Function0(
+    private val param1: HomeViewModel,
+) {
+
+    operator fun invoke() {
+        param1.badLoadItems()
+    }
+}
 
 @RootNavGraph(start = true)
 @Destination
@@ -33,17 +46,16 @@ fun HomeScreen(nav: DestinationsNavigator) {
 
     val vm = getViewModel<HomeViewModel>()
 
-    val state by vm.state.collectAsState() // Not lifecycle aware
+    val state by vm.state.collectAsStateOnLifecycle()
 
     val pinState = rememberPinState(loading = state.isLoading, scope = rememberCoroutineScope())
 
-    // will fix the leak
-    //    val updatedPinState by rememberUpdatedState(pinState)
+    val updatedPinState by rememberUpdatedState(pinState)
 
     // disposable effect leaked pinState
     DisposableEffect(Unit) {
 
-        pinState.pinEntered()
+        updatedPinState.pinEntered()
 
         onDispose { pinState.lock() }
     }
@@ -53,12 +65,11 @@ fun HomeScreen(nav: DestinationsNavigator) {
         clickedStartLoad = { vm.badLoadItems() }, // UNSTABLE ❌
         state = state
     )
-
-//    HomeScreenContent(
-//        state = state, // ✅ stable
-//        onStartLoad = vm::loadItems, // ✅ stable
-//        onOpened = vm::trackHomeOpenedAnalytics, // ✅ stable
-//    )
+    HomeScreenContent(
+        state = state, // ✅ stable
+        onStartLoad = vm::loadItems, // ✅ stable
+        onOpened = vm::trackHomeOpenedAnalytics, // ✅ stable
+    )
 }
 
 @Composable
@@ -67,7 +78,7 @@ private fun BadHomeScreenContent(
     clickedStartLoad: () -> Unit,  // ❌ improper naming
     state: HomeState,
 ) {
-    vm.trackHomeOpenedAnalytics() // will track on every recomposition (infinite loop)
+        vm.trackHomeOpenedAnalytics() // will track on every recomposition (infinite loop)
 
     val pinState = rememberKoinInject<PinState>() // rip previews ❌
 

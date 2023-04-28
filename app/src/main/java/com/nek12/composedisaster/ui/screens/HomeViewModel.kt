@@ -1,6 +1,7 @@
 package com.nek12.composedisaster.ui.screens
 
 import android.util.Log
+import androidx.compose.runtime.Immutable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.delay
@@ -10,7 +11,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlin.time.Duration.Companion.seconds
 
-//@Immutable
+@Immutable
 data class HomeState(
     var isLoading: Boolean = false, // unstable ❌
     val badItems: MutableList<String> = mutableListOf(), // unstable, dangerous ❌
@@ -24,7 +25,6 @@ class HomeViewModel(
 
     private val _state = MutableStateFlow(HomeState())
     val state = _state.asStateFlow()
-
 
     fun trackHomeOpenedAnalytics() = state {
         copy(screenOpenedTimes = screenOpenedTimes + 1)
