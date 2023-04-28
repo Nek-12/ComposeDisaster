@@ -11,6 +11,6 @@ import org.koin.dsl.module
 val appModule = module {
     viewModelOf(::HomeViewModel)
 
-    // not cool ❌, compose has its own scope
+    // ❌ compose has its own scope
     factory { PinStateImpl(GlobalScope) } bind PinState::class
 }
